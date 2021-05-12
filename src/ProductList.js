@@ -23,14 +23,14 @@ function ProductList() {
 		result = result.json();
 		getData()
 	}
-	
+
 
 
 	return (
 		<div>
 			<Header />
 			<h1>ProductList Page</h1>
-
+			<div className="col-sm-10 offset-sm-1">
 			<br></br>
 
 			<Table striped bordered hover>
@@ -54,7 +54,8 @@ function ProductList() {
 								<td>{item.price}</td>
 								<td>{item.description}</td>
 								<td>
-									<Link to={"update/" + item.id} ><span className="btn btn-primary">Edit</span></Link>&nbsp;&nbsp;
+									<Link to={"show/" + item.id} ><span className="btn btn-primary">View</span></Link>&nbsp;&nbsp;
+									<Link to={"update/" + item.id} ><span className="btn btn-warning">Edit</span></Link>&nbsp;&nbsp;
 									<span onClick={() => { deleteOperation(item.id) }} className="btn btn-danger">Delete</span>
 
 								</td>
@@ -63,6 +64,7 @@ function ProductList() {
 					}
 				</tbody>
 			</Table>
+		</div>
 		</div>
 	)
 }

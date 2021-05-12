@@ -40,7 +40,7 @@ function UpdateProduct(props) {
 			<div className="row">
 				<Header />
 				<h1>UpdateProduct Page</h1><br /><br /><br />
-				<Link to={"/"}> <span className="btn-btn-info btn-sm">Back</span></Link>
+				<Link to={"/"}> <span className="btn btn-info btn-sm">Back</span></Link><br />
 				<div className="col-sm-6 offset-sm-1">
 					<input type="text" className="form-control"
 						onChange={(e) => setName(e.target.value)}
